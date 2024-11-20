@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johnis Naturkompani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .category-container {
+            display: flex;
+            width: 100%;
+            height: 75vh;
+        }
+        .category-card {
+            flex: 1;
+            width: 25vw;
+            transition: width 0.3s ease;
+            overflow: hidden;
+        }
+        .category-card:hover {
+            width: 75vw;
+            flex: 2;
+            cursor: pointer;
+        }
+        .category-card:not(:hover) {
+            width: 25vw;
+            flex: 1;
+        }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <nav
+      class="sticky top-0 z-50 flex justify-between items-center p-4 bg-white shadow-md"
+    >
+      <div class="flex items-center space-x-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+        <span class="text-xl font-bold text-green-800"
+          >Johnis Naturkompani</span
+        >
+      </div>
+
+      <div
+        class="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-4"
+      >
+        <select
+          class="border border-gray-300 rounded-md py-2 px-3 mr-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+        >
+          <option>All Categories</option>
+          <option>Skidåkning</option>
+          <option>Sovsäckar</option>
+          <option>Sparskidor</option>
+          <option>Vandringskläder</option>
+        </select>
+        <input
+          type="text"
+          placeholder="Search..."
+          class="w-96 border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 text-gray-500 -ml-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <div class="flex space-x-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+            />
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <header class="relative">
+      <img
+        src="./assets/hiking.webp"
+        alt="Hero banner"
+        class="w-full h-[100vh] object-cover"
+      />
+      <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white"
+      >
+        <h1 class="text-4xl font-bold">SINGLES WEEK</h1>
+        <p>EXTRA RABATT PÅ ALLT!</p>
+      </div>
+    </header>
+
+    <section class="container mx-auto p-4">
+      <h2 class="text-2xl font-bold text-center mb-6">
+        VÅRA UTVALDA FAVORITER
+      </h2>
+      <div class="flex justify-end space-x-4">
+        <div class="grid grid-cols-5 gap-4">
+          <div class="bg-white shadow-md rounded-lg p-4 text-center relative">
+            <div
+              class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded"
+            >
+              Save 22%
+            </div>
+            <img
+              src="./assets/Basketball.png"
+              alt="Basketboll"
+              class="mx-auto mb-4"
+            />
+            <h3 class="font-bold">Basketboll</h3>
+            <p>Stadium</p>
+            <p class="text-green-600">In Stock</p>
+          </div>
+          <div class="bg-white shadow-md rounded-lg p-4 text-center relative">
+            <div
+              class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded"
+            >
+              Save 22%
+            </div>
+            <img
+              src="./assets/Basketball.png"
+              alt="Basketboll"
+              class="mx-auto mb-4"
+            />
+            <h3 class="font-bold">Basketboll</h3>
+            <p>Stadium</p>
+            <p class="text-green-600">In Stock</p>
+          </div>
+          <div class="bg-white shadow-md rounded-lg p-4 text-center relative">
+            <div
+              class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded"
+            >
+              Save 22%
+            </div>
+            <img
+              src="./assets/Basketball.png"
+              alt="Basketboll"
+              class="mx-auto mb-4"
+            />
+            <h3 class="font-bold">Basketboll</h3>
+            <p>Stadium</p>
+            <p class="text-green-600">In Stock</p>
+          </div>
+          <div class="bg-white shadow-md rounded-lg p-4 text-center relative">
+            <div
+              class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded"
+            >
+              Save 22%
+            </div>
+            <img
+              src="./assets/Basketball.png"
+              alt="Basketboll"
+              class="mx-auto mb-4"
+            />
+            <h3 class="font-bold">Basketboll</h3>
+            <p>Stadium</p>
+            <p class="text-green-600">In Stock</p>
+          </div>
+          <div class="bg-white shadow-md rounded-lg p-4 text-center relative">
+            <div
+              class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded"
+            >
+              Save 22%
+            </div>
+            <img
+              src="./assets/Basketball.png"
+              alt="Basketboll"
+              class="mx-auto mb-4"
+            />
+            <h3 class="font-bold">Basketboll</h3>
+            <p>Stadium</p>
+            <p class="text-green-600">In Stock</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto p-4">
+        <div class="category-container">
+            <div class="category-card relative">
+                <img src="./assets/skidakning.jpg" alt="SKIDÅKNING" class="w-full h-full object-cover">
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="text-xl font-bold">SKIDÅKNING</h3>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Utforska</button>
+                </div>
+            </div>
+            <div class="category-card relative">
+                <img src="./assets/sovsäck.jpg" alt="SOVSÄCKAR" class="w-full h-full object-cover">
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="text-xl font-bold">SOVSÄCKAR</h3>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Utforska</button>
+                </div>
+            </div>
+            <div class="category-card relative">
+                <img src="./assets/löparskor.webp" alt="Löparskor" class="w-full h-full object-cover">
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="text-xl font-bold">Löparskor</h3>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Utforska</button>
+                </div>
+            </div>
+            <div class="category-card relative">
+                <img src="./assets/vandringskläder.jpg" alt="VANDRINGSKLÄDER" class="w-full h-full object-cover">
+                <div class="absolute bottom-4 left-4 text-white">
+                    <h3 class="text-xl font-bold">VANDRINGSKLÄDER</h3>
+                    <button class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Utforska</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 p-8">
+      <div class="container mx-auto grid grid-cols-4 gap-8">
+        <div>
+          <h4 class="font-bold mb-4">Help & Support</h4>
+          <ul>
+            <li>Return Policy</li>
+            <li>Terms of Service</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Company Info</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Location</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Contact</h4>
+          <ul>
+            <li>Phone: +46 XX XXX XX XX</li>
+            <li>Email: info@example.com</li>
+            <li>Support Hours: 8:00 - 16:00</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Newsletter</h4>
+          <div class="flex space-x-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-grow border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            <button class="bg-green-800 text-white px-4 py-2 rounded">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
